@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)http://twinery.org/2/?#stories/1f6e9189-2cac-c9c0-be34-b5f4d27c57b7/proof -->
+<html data-build-number="201501141000"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Kulhwch
+</title>
+<meta charset="utf-8">
+<style>
+body
+{
+	font: 10pt Cousine, monospace;
+	margin: 2em;
+}
+
+h1
+{
+	font-size: 14pt;
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+tw-passagedata
+{
+	display: block !important;
+	line-height: 200%;
+	margin-bottom: 2em;
+	white-space: pre-wrap;
+}
+
+tw-passagedata + tw-passagedata
+{
+	border-top: 1pt dashed black;
+	padding-top: 2em;
+}
+
+tw-passagedata:before
+{
+	content: attr(name);
+	display: block;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<body data-feedly-mini="yes">
+
+<h1>Kulhwch
+</h1>
+<tw-storydata name="Kulhwch" startnode="1" creator="Twine" creator-version="2.0.2" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Your Predicament" tags="" position="665,323">The queen, your jealous stepmother
+has put a stop to your romantic quest
+to separate you being with your lover
+and to make sure you fail your test
+
+So she has locked you in your room
+and she will never let you go free
+and every hour closer your death looms
+unless you can find some way to flee
+(set: $knife=false)(set: $curtains="hanging")(set: $pan="hidden")
+[[Try to escape|The Bedroom]]
+</tw-passagedata><tw-passagedata pid="2" name="The Bedroom" tags="" position="665,473">Even a stately royal [[chamber|Examine Room]]
+can seem a prison to a prince
+With [[locks|Examine Door]] of a higher caliber
+but still a captive in affluence
+
+Examine the [[window|Examine Window]], [[table|Examine Table]], or [[bed|Examine Bed]].
+
+(if: $knife is true)[You are holding the small [[knife|Examine Knife]].]
+</tw-passagedata><tw-passagedata pid="3" name="Examine Room" tags="" position="665,623">A room commodious with ceiling tall
+it has at moments brought peace sublime
+yet now trapped it seems unbearably small
+and you cannot wait to escape this time.
+
+Return to the looking around the [[bedroom|The Bedroom]].</tw-passagedata><tw-passagedata pid="4" name="Examine Door" tags="" position="815,623">The only way out keeps you in
+shut tight and without a gap
+This is where your problems begin
+It has made your room a trap.
+
+Return to the looking around the [[bedroom|The Bedroom]].</tw-passagedata><tw-passagedata pid="5" name="Examine Window" tags="" position="965,623">In castles love is often imprisoned
+and from the world such loves do hide
+Yet love scales walls when hands couldn't
+and across deep moats such loves abide
+
+(if: $curtains is "hanging")[Examine the [[curtains|Examine Curtains]].]
+(if: $curtains is "cut")[There are curtains here on the floor.]
+(if: $pan is not "dropped")[Look [[outside|Examine Outside]].]
+
+Return to the looking around the [[bedroom|The Bedroom]].</tw-passagedata><tw-passagedata pid="6" name="Examine Table" tags="" position="1115,623">This table is ornate, of the finest craftmanship
+Yet this furniture serves a very simple purpose
+Now is not the time to practice your penmanship
+But maybe there's something useful on its surface
+
+An old moldy [[cheese|Examine Cheese]] seems to be becoming part of the wood.  (if: $knife is false)[ A small [[knife|Examine Knife]] rests within its rind.]
+
+Return to the looking around the [[bedroom|The Bedroom]].</tw-passagedata><tw-passagedata pid="7" name="Examine Bed" tags="" position="1265,623">Here you have slept and dreamt of her
+upon this fine four poster bed
+But now you wish upon her breast
+is where you could now rest your head.
+
+Examine the [[sheets|Examine Sheets]](if: $pan is not "dropped")[, or look under the [[bed|Chamber Pot]].]
+
+Return to the looking around the [[bedroom|The Bedroom]].</tw-passagedata><tw-passagedata pid="8" name="Examine Knife" tags="" position="1415,623">The shark has pearly teeth dear
+and he keeps them out of sight
+But from this blade you needn't fear
+it's only a kitchen knife.
+
+(if $knife is false)[With a good tug it seems it would be [[removable|Remove Knife]].]
+
+Return to the looking around the [[bedroom|The Bedroom]].</tw-passagedata><tw-passagedata pid="9" name="Remove Knife" tags="" position="1465,773">(set: $knife to true)[You are now carrying the knife.]
+
+Look around the [[bedroom|The Bedroom]] again if you like.
+</tw-passagedata><tw-passagedata pid="10" name="Examine Cheese" tags="" position="1215,766">Manys the night I've dreamed of cheese
+but such dreams would not now please
+But could this be what you may yet need
+if in leaving this room you do succeed?
+
+(if: $knife is false)[ There is a knife stuck in the rind.  With a good tug it seems it would be [[removable|Remove Knife]].]
+  
+Return to the looking around the [[bedroom|The Bedroom]].</tw-passagedata><tw-passagedata pid="11" name="Examine Curtains" tags="" position="965,773">These very heavy curtains
+are far from being frail
+they're thick for certain
+secured fast to the rail.
+
+(if: $knife is true)[The knife you are holding could [[cut|Cut Curtains]] these curtains down, if you were so inclined.]
+
+Return to the looking around the [[bedroom|The Bedroom]].</tw-passagedata><tw-passagedata pid="12" name="Examine Outside" tags="" position="1090,773">A guard below goes
+about his duties 
+to and fro
+pacing back and forth 
+far below 
+your window.
+
+(if: $pan is "found")[Wasn't there something under the bed that could [[render that guard useless|Knock Out Guard]]?]
+
+Return to the looking around the [[bedroom|The Bedroom]].</tw-passagedata><tw-passagedata pid="13" name="Examine Sheets" tags="" position="1340,891">Fine sheets of linen
+The strongest man
+could not tear them.
+
+(if: $curtains is "cut")[A clever fellow might consider [[tying|Tie Sheets]] the sheets to the curtains.](if: $curtains is not "cut")[If only these were long enough by themselves to let you climb out the window.]
+
+Return to the looking around the [[bedroom|The Bedroom]].</tw-passagedata><tw-passagedata pid="14" name="Chamber Pot" tags="" position="840,773">A chamber pot
+we should not
+disparage
+The humble lot
+to hold our rot
+its usage.
+(set: $pan="found")
+If I were you (and I am) I'd try to empty this out when I can.
+
+Return to the looking around the [[bedroom|The Bedroom]].</tw-passagedata><tw-passagedata pid="15" name="Tie Sheets" tags="" position="1340,1041">(set: $sheets="tied")You tied the two together (and to the bedpost), and dropped them out the window.  (if: $pan is not "dropped")[However, you didn't take care of the guard first, and he sounded an alarm.  Now your chance of escape is gone!](if: $pan is "dropped")[Fortunately, having already disposed of the guard you were able to make your escape!]</tw-passagedata><tw-passagedata pid="16" name="Cut Curtains" tags="" position="965,923">(set: $curtains="cut")[The curtains are now removed from the rail.]
+
+Return to the looking around the [[bedroom|The Bedroom]].</tw-passagedata><tw-passagedata pid="17" name="Knock Out Guard" tags="" position="1090,923">(set: $pan="dropped")[The guard is no longer an impediment to your escape, getting down safely might be however.]
+
+Return to the looking around the [[bedroom|The Bedroom]].</tw-passagedata></tw-storydata>
+
+
+<div id="feedly-mini" title="feedly Mini tookit"></div></body></html>
