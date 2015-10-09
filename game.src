@@ -90,7 +90,7 @@ and he keeps them out of sight
 But from this blade you needn't fear
 it's only a kitchen knife.
 
-(if $knife is false)[With a good tug it seems it would be [[removable|Remove
+(if: $knife is false)[With a good tug it seems it would be [[removable|Remove
 Knife]].]
 
 Return to the looking around the [[bedroom|The Bedroom]].
