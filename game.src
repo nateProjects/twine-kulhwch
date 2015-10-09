@@ -1,0 +1,188 @@
+Kulhwch
+
+::Your Predicament
+
+The queen, your jealous stepmother
+has put a stop to your romantic quest
+to separate you being with your lover
+and to make sure you fail your test
+
+So she has locked you in your room
+and she will never let you go free
+and every hour closer your death looms
+unless you can find some way to flee
+
+(set: $knife=false)(set: $curtains="hanging")(set: $pan="hidden")
+
+[[Try to escape|The Bedroom]]
+
+::The Bedroom
+
+Even a stately royal [[chamber|Examine Room]]
+can seem a prison to a prince
+With [[locks|Examine Door]] of a higher caliber
+but still a captive in affluence
+
+Examine the [[window|Examine Window]], [[table|Examine Table]], or [[bed|Examine
+Bed]].
+
+(if: $knife is true)[You are holding the small [[knife|Examine Knife]].]
+
+::Examine Room
+
+A room commodious with ceiling tall
+it has at moments brought peace sublime
+yet now trapped it seems unbearably small
+and you cannot wait to escape this time.
+
+Return to the looking around the [[bedroom|The Bedroom]].
+
+::Examine Door
+
+The only way out keeps you in
+shut tight and without a gap
+This is where your problems begin
+It has made your room a trap.
+
+Return to the looking around the [[bedroom|The Bedroom]].
+
+::Examine Window
+
+In castles love is often imprisoned
+and from the world such loves do hide
+Yet love scales walls when hands couldn't
+and across deep moats such loves abide
+
+(if: $curtains is "hanging")[Examine the [[curtains|Examine Curtains]].]
+(if: $curtains is "cut")[There are curtains here on the floor.]
+(if: $pan is not "dropped")[Look [[outside|Examine Outside]].]
+
+Return to the looking around the [[bedroom|The Bedroom]].
+
+::Examine Table
+
+This table is ornate, of the finest craftmanship
+Yet this furniture serves a very simple purpose
+Now is not the time to practice your penmanship
+But maybe there's something useful on its surface
+
+An old moldy [[cheese|Examine Cheese]] seems to be becoming part of the wood.  (if:
+$knife is false)[ A small [[knife|Examine Knife]] rests within its rind.]
+
+Return to the looking around the [[bedroom|The Bedroom]].
+
+::Examine Bed
+
+Here you have slept and dreamt of her
+upon this fine four poster bed
+But now you wish upon her breast
+is where you could now rest your head.
+
+Examine the [[sheets|Examine Sheets]](if: $pan is not "dropped")[, or look under the
+[[bed|Chamber Pot]].]
+
+Return to the looking around the [[bedroom|The Bedroom]].
+
+::Examine Knife
+
+The shark has pearly teeth dear
+and he keeps them out of sight
+But from this blade you needn't fear
+it's only a kitchen knife.
+
+(if $knife is false)[With a good tug it seems it would be [[removable|Remove
+Knife]].]
+
+Return to the looking around the [[bedroom|The Bedroom]].
+
+::Remove Knife
+
+(set: $knife to true)[You are now carrying the knife.]
+
+Look around the [[bedroom|The Bedroom]] again if you like.
+
+::Examine Cheese
+
+Manys the night I've dreamed of cheese
+but such dreams would not now please
+But could this be what you may yet need
+if in leaving this room you do succeed?
+
+(if: $knife is false)[ There is a knife stuck in the rind.  With a good tug it seems
+it would be [[removable|Remove Knife]].]
+
+Return to the looking around the [[bedroom|The Bedroom]].
+
+::Examine Curtains
+
+These very heavy curtains
+are far from being frail
+they're thick for certain
+secured fast to the rail.
+
+(if: $knife is true)[The knife you are holding could [[cut|Cut Curtains]] these
+curtains down, if you were so inclined.]
+
+Return to the looking around the [[bedroom|The Bedroom]].
+
+::Examine Outside
+
+A guard below goes
+about his duties
+to and fro
+pacing back and forth
+far below
+your window.
+
+(if: $pan is "found")[Wasn't there something under the bed that could [[render that guard useless|Knock Out Guard]]?]
+
+Return to the looking around the [[bedroom|The Bedroom]].
+
+::Examine Sheets
+
+Fine sheets of linen
+The strongest man
+could not tear them.
+
+(if: $curtains is "cut")[A clever fellow might consider [[tying|Tie Sheets]] the
+sheets to the curtains.]
+(else:)[If only these were long enough by themselves to let you climb out the window.]
+
+Return to the looking around the [[bedroom|The Bedroom]].
+
+::Chamber Pot
+
+A chamber pot
+we should not
+disparage
+The humble lot
+to hold our rot
+its usage.
+
+(set: $pan="found")
+
+If I were you (and I am) I'd try to empty this out when I can.
+
+Return to the looking around the [[bedroom|The Bedroom]].
+
+::Tie Sheets
+
+(set: $sheets="tied")You tied the two together (and to the bedpost), and dropped them
+out the window.  
+(if: $pan is not "dropped")[However, you didn't take care of the
+guard first, and he sounded an alarm.  Now your chance of escape is gone!]
+(if: $pan is "dropped")[Fortunately, having already disposed of the guard you were able to make
+your escape!]
+
+::Cut Curtains
+
+(set: $curtains="cut")[The curtains are now removed from the rail.]
+
+Return to the looking around the [[bedroom|The Bedroom]].
+
+::Knock Out Guard
+
+(set: $pan="dropped")[The guard is no longer an impediment to your escape, getting
+down safely might be however.]
+
+Return to the looking around the [[bedroom|The Bedroom]].
