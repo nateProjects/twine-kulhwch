@@ -9,4 +9,4 @@ Play it here -
 
 [Twine 1 Play](http://jollyjauntgames.com/kulhwch/)
 
-See [Twine Resources](https://github.com/nate2squared/game-creation/tree/master/twine)
+See [Twine Resources](https://github.com/nate2squared/twine)
